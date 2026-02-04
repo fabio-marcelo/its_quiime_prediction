@@ -1,0 +1,192 @@
+Unnamed: 0	taxonomy	Tool	Count
+file-1	k__Fungi	blast	4.0
+file-1	k__Fungi	vsearch	202.0
+file-1	k__Fungi; p__Ascomycota	vsearch	156967.0
+file-1	k__Fungi; p__Ascomycota; c__Dothideomycetes	sklearn	549.0
+file-1	k__Fungi; p__Ascomycota; c__Dothideomycetes; o__Mycosphaerellales; f__Mycosphaerellaceae	sklearn	80.0
+file-1	k__Fungi; p__Ascomycota; c__Dothideomycetes; o__Mycosphaerellales; f__Mycosphaerellaceae; g__Mycosphaerella; s__Mycosphaerella_fijiensis	sklearn	156318.0
+file-1	k__Fungi; p__Ascomycota; c__Dothideomycetes; o__Pleosporales; f__Coniothyriaceae; g__Coniothyrium; s__Coniothyrium_sidae	sklearn	4.0
+file-1	k__Fungi; p__Ascomycota; c__Orbiliomycetes; o__Orbiliales; f__Orbiliaceae	vsearch	253.0
+file-1	k__Fungi; p__Ascomycota; c__Orbiliomycetes; o__Orbiliales; f__Orbiliaceae; g__Orbiliaceae_gen_Incertae_sedis; s__Orbiliaceae_sp	vsearch	213.0
+file-1	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Hypocreales; f__Nectriaceae	blast	13.0
+file-1	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Hypocreales; f__Nectriaceae; g__Fusarium	sklearn	13.0
+file-1	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Magnaporthales; f__Pyriculariaceae; g__Neocordana	sklearn	3.0
+file-1	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Magnaporthales; f__Pyriculariaceae; g__Neocordana; s__Neocordana_musae	blast	3.0
+file-10	k__Fungi; p__Ascomycota; c__Orbiliomycetes; o__Orbiliales; f__Orbiliaceae	vsearch	5.0
+file-10	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Hypocreales; f__Cordycipitaceae; g__Cordyceps	sklearn	5.0
+file-10	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Hypocreales; f__Cordycipitaceae; g__Cordyceps; s__Cordyceps_javanica	blast	5.0
+file-11	k__Fungi	blast	29.0
+file-11	k__Fungi; p__Ascomycota	vsearch	9.0
+file-11	k__Fungi; p__Ascomycota; c__Orbiliomycetes; o__Orbiliales; f__Orbiliaceae	vsearch	29.0
+file-11	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_ethanolica	sklearn	7.0
+file-11	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_sp	blast	7.0
+file-11	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Hypocreales; f__Hypocreaceae	blast	3.0
+file-11	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Hypocreales; f__Hypocreaceae; g__Trichoderma	sklearn	3.0
+file-11	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Hypocreales; f__Hypocreaceae; g__Trichoderma	vsearch	3.0
+file-11	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Hypocreales; f__Ophiocordycipitaceae; g__Purpureocillium	sklearn	29.0
+file-11	k__Fungi; p__Basidiomycota; c__Tremellomycetes; o__Tremellales	blast	2.0
+file-11	k__Fungi; p__Basidiomycota; c__Tremellomycetes; o__Tremellales; f__Rhynchogastremataceae; g__Papiliotrema; s__Papiliotrema_laurentii	sklearn	2.0
+file-12	k__Fungi; p__Ascomycota	vsearch	34.0
+file-12	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_ethanolica	blast	10.0
+file-12	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_ethanolica	sklearn	10.0
+file-12	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Hypocreales; f__Ophiocordycipitaceae	sklearn	24.0
+file-12	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Hypocreales; f__Ophiocordycipitaceae; g__Purpureocillium	blast	24.0
+file-12	k__Fungi; p__Fungi_phy_Incertae_sedis; c__Fungi_cls_Incertae_sedis; o__Fungi_ord_Incertae_sedis; f__Fungi_fam_Incertae_sedis; g__Fungi_gen_Incertae_sedis; s__Fungi_sp	blast	4.0
+file-12	k__Fungi; p__Fungi_phy_Incertae_sedis; c__Fungi_cls_Incertae_sedis; o__Fungi_ord_Incertae_sedis; f__Fungi_fam_Incertae_sedis; g__Fungi_gen_Incertae_sedis; s__Fungi_sp	vsearch	4.0
+file-13	k__Fungi	blast	4064.0
+file-13	k__Fungi	vsearch	68.0
+file-13	k__Fungi; p__Ascomycota	sklearn	128.0
+file-13	k__Fungi; p__Ascomycota	vsearch	10924.0
+file-13	k__Fungi; p__Ascomycota; c__Dothideomycetes; o__Pleosporales; f__Phaeosphaeriaceae	sklearn	17.0
+file-13	k__Fungi; p__Ascomycota; c__Orbiliomycetes; o__Orbiliales; f__Orbiliaceae	vsearch	2899.0
+file-13	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Debaryomycetaceae; g__Hyphopichia; s__Hyphopichia_burtonii	blast	5401.0
+file-13	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Debaryomycetaceae; g__Hyphopichia; s__Hyphopichia_burtonii	sklearn	5401.0
+file-13	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_ethanolica	sklearn	6.0
+file-13	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_sp	blast	6.0
+file-13	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Hypocreales	sklearn	74.0
+file-13	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Hypocreales; f__Cordycipitaceae; g__Cordyceps	sklearn	32.0
+file-13	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Hypocreales; f__Cordycipitaceae; g__Cordyceps; s__Cordyceps_javanica	blast	32.0
+file-13	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Hypocreales; f__Ophiocordycipitaceae; g__Purpureocillium	sklearn	2762.0
+file-13	k__Fungi; p__Basidiomycota; c__Agaricomycetes; o__Auriculariales; f__Auriculariaceae; g__Auricularia	sklearn	3581.0
+file-13	k__Fungi; p__Basidiomycota; c__Agaricomycetes; o__Polyporales; f__Polyporaceae	sklearn	12.0
+file-13	k__Fungi; p__Basidiomycota; c__Agaricomycetes; o__Polyporales; f__Polyporaceae; g__Funalia; s__Funalia_sp	blast	12.0
+file-13	k__Fungi; p__Basidiomycota; c__Microbotryomycetes; o__Sporidiobolales; f__Sporidiobolaceae; g__Rhodotorula; s__Rhodotorula_toruloides	sklearn	1211.0
+file-13	k__Fungi; p__Basidiomycota; c__Tremellomycetes; o__Tremellales; f__Cryptococcaceae; g__Kwoniella; s__Kwoniella_heveanensis	sklearn	599.0
+file-13	k__Fungi; p__Fungi_phy_Incertae_sedis; c__Fungi_cls_Incertae_sedis; o__Fungi_ord_Incertae_sedis; f__Fungi_fam_Incertae_sedis; g__Fungi_gen_Incertae_sedis; s__Fungi_sp	blast	4903.0
+file-13	k__Fungi; p__Fungi_phy_Incertae_sedis; c__Fungi_cls_Incertae_sedis; o__Fungi_ord_Incertae_sedis; f__Fungi_fam_Incertae_sedis; g__Fungi_gen_Incertae_sedis; s__Fungi_sp	vsearch	4835.0
+file-14	k__Fungi; p__Ascomycota; c__Orbiliomycetes; o__Orbiliales; f__Orbiliaceae	vsearch	838.0
+file-14	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Hypocreales; f__Cordycipitaceae; g__Cordyceps	sklearn	838.0
+file-14	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Hypocreales; f__Cordycipitaceae; g__Cordyceps; s__Cordyceps_javanica	blast	838.0
+file-15	k__Fungi; p__Ascomycota; c__Orbiliomycetes; o__Orbiliales; f__Orbiliaceae	vsearch	6.0
+file-15	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Hypocreales; f__Cordycipitaceae; g__Cordyceps	sklearn	6.0
+file-15	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Hypocreales; f__Cordycipitaceae; g__Cordyceps; s__Cordyceps_javanica	blast	6.0
+file-16	k__Fungi	vsearch	2.0
+file-16	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_ethanolica	sklearn	2.0
+file-17	k__Fungi	vsearch	27773.0
+file-17	k__Fungi; p__Ascomycota	vsearch	35640.0
+file-17	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_ethanolica	blast	199.0
+file-17	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_ethanolica	sklearn	63384.0
+file-17	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_sp	blast	35033.0
+file-17	k__Fungi; p__Basidiomycota; c__Agaricomycetes; o__Agaricales; f__Psathyrellaceae; g__Coprinellus	sklearn	29.0
+file-17	k__Fungi; p__Fungi_phy_Incertae_sedis; c__Fungi_cls_Incertae_sedis; o__Fungi_ord_Incertae_sedis; f__Fungi_fam_Incertae_sedis; g__Fungi_gen_Incertae_sedis; s__Fungi_sp	blast	349.0
+file-17	k__Fungi; p__Fungi_phy_Incertae_sedis; c__Fungi_cls_Incertae_sedis; o__Fungi_ord_Incertae_sedis; f__Fungi_fam_Incertae_sedis; g__Fungi_gen_Incertae_sedis; s__Fungi_sp	vsearch	349.0
+file-18	k__Fungi	vsearch	4070.0
+file-18	k__Fungi; p__Ascomycota	vsearch	156810.0
+file-18	k__Fungi; p__Ascomycota; c__Dothideomycetes	sklearn	32.0
+file-18	k__Fungi; p__Ascomycota; c__Dothideomycetes; o__Pleosporales; f__Didymellaceae	sklearn	267.0
+file-18	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_ethanolica	blast	74536.0
+file-18	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_ethanolica	sklearn	160581.0
+file-18	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_sp	blast	82310.0
+file-18	k__Fungi; p__Fungi_phy_Incertae_sedis; c__Fungi_cls_Incertae_sedis; o__Fungi_ord_Incertae_sedis; f__Fungi_fam_Incertae_sedis; g__Fungi_gen_Incertae_sedis; s__Fungi_sp	blast	222.0
+file-18	k__Fungi; p__Fungi_phy_Incertae_sedis; c__Fungi_cls_Incertae_sedis; o__Fungi_ord_Incertae_sedis; f__Fungi_fam_Incertae_sedis; g__Fungi_gen_Incertae_sedis; s__Fungi_sp	vsearch	4.0
+file-19	k__Fungi	blast	309.0
+file-19	k__Fungi	vsearch	2689.0
+file-19	k__Fungi; p__Ascomycota	vsearch	134592.0
+file-19	k__Fungi; p__Ascomycota; c__Dothideomycetes; o__Pleosporales; f__Didymellaceae	sklearn	3297.0
+file-19	k__Fungi; p__Ascomycota; c__Eurotiomycetes; o__Eurotiales; f__Aspergillaceae	sklearn	2593.0
+file-19	k__Fungi; p__Ascomycota; c__Eurotiomycetes; o__Eurotiales; f__Aspergillaceae; g__Aspergillus	blast	145.0
+file-19	k__Fungi; p__Ascomycota; c__Eurotiomycetes; o__Eurotiales; f__Aspergillaceae; g__Aspergillus	sklearn	145.0
+file-19	k__Fungi; p__Ascomycota; c__Orbiliomycetes; o__Orbiliales; f__Orbiliaceae	vsearch	828.0
+file-19	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_ethanolica	blast	57369.0
+file-19	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_ethanolica	sklearn	131514.0
+file-19	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_sp	blast	72007.0
+file-19	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Hypocreales; f__Hypocreaceae; g__Trichoderma	sklearn	309.0
+file-19	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Hypocreales; f__Nectriaceae; g__Fusarium	blast	12521.0
+file-19	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Hypocreales; f__Nectriaceae; g__Fusarium	sklearn	12521.0
+file-19	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Hypocreales; f__Nectriaceae; g__Fusarium	vsearch	12521.0
+file-19	k__Fungi; p__Basidiomycota; c__Agaricomycetes; o__Polyporales; f__Phanerochaetaceae; g__Crepatura; s__Crepatura_sp	sklearn	828.0
+file-19	k__Fungi; p__Basidiomycota; c__Wallemiomycetes; o__Wallemiales; f__Wallemiaceae; g__Wallemia; s__Wallemia_sp	sklearn	661.0
+file-19	k__Fungi; p__Fungi_phy_Incertae_sedis; c__Fungi_cls_Incertae_sedis; o__Fungi_ord_Incertae_sedis; f__Fungi_fam_Incertae_sedis; g__Fungi_gen_Incertae_sedis; s__Fungi_sp	blast	5717.0
+file-19	k__Fungi; p__Fungi_phy_Incertae_sedis; c__Fungi_cls_Incertae_sedis; o__Fungi_ord_Incertae_sedis; f__Fungi_fam_Incertae_sedis; g__Fungi_gen_Incertae_sedis; s__Fungi_sp	vsearch	2694.0
+file-2	k__Fungi; p__Ascomycota	vsearch	9.0
+file-2	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_ethanolica	blast	9.0
+file-2	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_ethanolica	sklearn	9.0
+file-20	k__Fungi; p__Ascomycota	vsearch	1.0
+file-20	k__Fungi; p__Ascomycota; c__Dothideomycetes; o__Mycosphaerellales; f__Mycosphaerellaceae; g__Mycosphaerella; s__Mycosphaerella_fijiensis	sklearn	1.0
+file-21	k__Fungi; p__Ascomycota	vsearch	1.0
+file-21	k__Fungi; p__Ascomycota; c__Dothideomycetes; o__Mycosphaerellales; f__Mycosphaerellaceae; g__Mycosphaerella; s__Mycosphaerella_fijiensis	sklearn	1.0
+file-22	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_ethanolica	sklearn	1.0
+file-23	k__Fungi	vsearch	5292.0
+file-23	k__Fungi; p__Ascomycota	vsearch	23016.0
+file-23	k__Fungi; p__Ascomycota; c__Dothideomycetes; o__Capnodiales; f__Cladosporiaceae; g__Cladosporium; s__Cladosporium_aciculare	blast	8435.0
+file-23	k__Fungi; p__Ascomycota; c__Dothideomycetes; o__Capnodiales; f__Cladosporiaceae; g__Cladosporium; s__Cladosporium_aciculare	sklearn	8435.0
+file-23	k__Fungi; p__Basidiomycota; c__Malasseziomycetes; o__Malasseziales; f__Malasseziaceae; g__Malassezia; s__Malassezia_sp	blast	61.0
+file-23	k__Fungi; p__Fungi_phy_Incertae_sedis; c__Fungi_cls_Incertae_sedis; o__Fungi_ord_Incertae_sedis; f__Fungi_fam_Incertae_sedis; g__Fungi_gen_Incertae_sedis; s__Fungi_sp	blast	90326.0
+file-23	k__Fungi; p__Fungi_phy_Incertae_sedis; c__Fungi_cls_Incertae_sedis; o__Fungi_ord_Incertae_sedis; f__Fungi_fam_Incertae_sedis; g__Fungi_gen_Incertae_sedis; s__Fungi_sp	vsearch	85034.0
+file-3	k__Fungi; p__Ascomycota	vsearch	14.0
+file-3	k__Fungi; p__Ascomycota; c__Dothideomycetes; o__Mycosphaerellales; f__Mycosphaerellaceae; g__Mycosphaerella; s__Mycosphaerella_fijiensis	sklearn	2.0
+file-3	k__Fungi; p__Ascomycota; c__Orbiliomycetes; o__Orbiliales; f__Orbiliaceae	vsearch	22.0
+file-3	k__Fungi; p__Ascomycota; c__Orbiliomycetes; o__Orbiliales; f__Orbiliaceae; g__Orbiliaceae_gen_Incertae_sedis; s__Orbiliaceae_sp	vsearch	30.0
+file-3	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_ethanolica	sklearn	12.0
+file-3	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_sp	blast	12.0
+file-4	k__Fungi; p__Ascomycota	vsearch	1.0
+file-4	k__Fungi; p__Ascomycota; c__Dothideomycetes; o__Mycosphaerellales; f__Mycosphaerellaceae; g__Mycosphaerella; s__Mycosphaerella_fijiensis	sklearn	1.0
+file-5	k__Fungi	sklearn	9.0
+file-5	k__Fungi	vsearch	101.0
+file-5	k__Fungi; p__Ascomycota	blast	16.0
+file-5	k__Fungi; p__Ascomycota	vsearch	28104.0
+file-5	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales	blast	80.0
+file-5	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales	sklearn	16.0
+file-5	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Pichiaceae; g__Pichia; s__Pichia_membranifaciens	blast	62.0
+file-5	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Pichiaceae; g__Pichia; s__Pichia_membranifaciens	sklearn	62.0
+file-5	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetaceae; g__Issatchenkia; s__Issatchenkia_orientalis	sklearn	80.0
+file-5	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida	sklearn	25.0
+file-5	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_californica	sklearn	8.0
+file-5	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_ethanolica	blast	4406.0
+file-5	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_ethanolica	sklearn	27996.0
+file-5	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_sp	blast	23550.0
+file-5	k__Fungi; p__Basidiomycota; c__Tremellomycetes; o__Tremellales; f__Bulleribasidiaceae; g__Hannaella	sklearn	3.0
+file-6	k__Fungi	sklearn	25.0
+file-6	k__Fungi	vsearch	299.0
+file-6	k__Fungi; p__Ascomycota	blast	41.0
+file-6	k__Fungi; p__Ascomycota	vsearch	48940.0
+file-6	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales	blast	74.0
+file-6	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales	sklearn	41.0
+file-6	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Pichiaceae; g__Dekkera; s__Dekkera_custersiana	blast	7.0
+file-6	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Pichiaceae; g__Dekkera; s__Dekkera_custersiana	sklearn	7.0
+file-6	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Pichiaceae; g__Pichia; s__Pichia_membranifaciens	sklearn	18.0
+file-6	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetaceae; g__Issatchenkia; s__Issatchenkia_orientalis	sklearn	74.0
+file-6	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida	sklearn	58.0
+file-6	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_ethanolica	blast	7298.0
+file-6	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_ethanolica	sklearn	49019.0
+file-6	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_sp	blast	41534.0
+file-6	k__Fungi; p__Basidiomycota; c__Tremellomycetes; o__Tremellales; f__Bulleribasidiaceae; g__Hannaella; s__Hannaella_zeae	sklearn	4.0
+file-6	k__Fungi; p__Fungi_phy_Incertae_sedis; c__Fungi_cls_Incertae_sedis; o__Fungi_ord_Incertae_sedis; f__Fungi_fam_Incertae_sedis; g__Fungi_gen_Incertae_sedis; s__Fungi_sp	blast	2.0
+file-6	k__Fungi; p__Fungi_phy_Incertae_sedis; c__Fungi_cls_Incertae_sedis; o__Fungi_ord_Incertae_sedis; f__Fungi_fam_Incertae_sedis; g__Fungi_gen_Incertae_sedis; s__Fungi_sp	vsearch	2.0
+file-7	k__Fungi	sklearn	101.0
+file-7	k__Fungi	vsearch	2004.0
+file-7	k__Fungi; p__Ascomycota	blast	45.0
+file-7	k__Fungi; p__Ascomycota	vsearch	200341.0
+file-7	k__Fungi; p__Ascomycota; c__Dothideomycetes; o__Pleosporales	sklearn	3.0
+file-7	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales	blast	492.0
+file-7	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales	sklearn	61.0
+file-7	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Dipodascaceae	sklearn	126.0
+file-7	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Pichiaceae; g__Pichia; s__Pichia_membranifaciens	blast	247.0
+file-7	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Pichiaceae; g__Pichia; s__Pichia_membranifaciens	sklearn	247.0
+file-7	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetaceae; g__Issatchenkia; s__Issatchenkia_orientalis	sklearn	492.0
+file-7	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida	blast	22.0
+file-7	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida	sklearn	293.0
+file-7	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida	vsearch	22.0
+file-7	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_californica	sklearn	23.0
+file-7	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_ethanolica	blast	29005.0
+file-7	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_ethanolica	sklearn	200692.0
+file-7	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_sp	blast	170407.0
+file-7	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_tropicalis	blast	27.0
+file-7	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_tropicalis	sklearn	27.0
+file-7	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Diutina; s__Diutina_rugosa	blast	204.0
+file-7	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Diutina; s__Diutina_rugosa	sklearn	204.0
+file-7	k__Fungi; p__Basidiomycota; c__Pucciniomycetes; o__Septobasidiales; f__Septobasidiaceae	sklearn	41.0
+file-7	k__Fungi; p__Basidiomycota; c__Pucciniomycetes; o__Septobasidiales; f__Septobasidiaceae; g__Septobasidium; s__Septobasidium_sp	blast	22.0
+file-7	k__Fungi; p__Basidiomycota; c__Wallemiomycetes; o__Wallemiales; f__Wallemiaceae; g__Wallemia	blast	6.0
+file-7	k__Fungi; p__Basidiomycota; c__Wallemiomycetes; o__Wallemiales; f__Wallemiaceae; g__Wallemia	sklearn	6.0
+file-7	k__Fungi; p__Fungi_phy_Incertae_sedis; c__Fungi_cls_Incertae_sedis; o__Fungi_ord_Incertae_sedis; f__Fungi_fam_Incertae_sedis; g__Fungi_gen_Incertae_sedis; s__Fungi_sp	blast	3.0
+file-7	k__Fungi; p__Fungi_phy_Incertae_sedis; c__Fungi_cls_Incertae_sedis; o__Fungi_ord_Incertae_sedis; f__Fungi_fam_Incertae_sedis; g__Fungi_gen_Incertae_sedis; s__Fungi_sp	vsearch	3.0
+file-8	k__Fungi; p__Ascomycota; c__Orbiliomycetes; o__Orbiliales; f__Orbiliaceae	vsearch	21.0
+file-8	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Hypocreales; f__Cordycipitaceae; g__Cordyceps	sklearn	21.0
+file-8	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Hypocreales; f__Cordycipitaceae; g__Cordyceps; s__Cordyceps_javanica	blast	21.0
+file-9	k__Fungi; p__Ascomycota	vsearch	7.0
+file-9	k__Fungi; p__Ascomycota; c__Orbiliomycetes; o__Orbiliales; f__Orbiliaceae	vsearch	110.0
+file-9	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_ethanolica	sklearn	7.0
+file-9	k__Fungi; p__Ascomycota; c__Saccharomycetes; o__Saccharomycetales; f__Saccharomycetales_fam_Incertae_sedis; g__Candida; s__Candida_sp	blast	7.0
+file-9	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Hypocreales; f__Cordycipitaceae; g__Cordyceps	sklearn	110.0
+file-9	k__Fungi; p__Ascomycota; c__Sordariomycetes; o__Hypocreales; f__Cordycipitaceae; g__Cordyceps; s__Cordyceps_javanica	blast	110.0

@@ -1,9 +1,26 @@
 ---
 title: "Untitled"
 params:
-  fastqc_dir: "/home/rstudio/nextflow_run/fastqc_dir"
-  folder_full: "/home/rstudio/nextflow_run"
-format: html
+  fastqc_dir: ""
+  folder_full: ""
+execute:
+  cache: true
+  freeze: auto
+author: "Fábio M. de Lima"
+date: "`r Sys.Date()`"
+format:
+    html:
+      toc-title: Table of contents
+      toc: true
+      toc-depth: 2
+      number-sections: true
+      highlight-style: github
+      toc-location: body
+      cap-location: top
+      page-layout: full
+      embed-resources: true
+      self-contained-math: true
+      toc-expand: true
 editor: visual
 ---
 
@@ -21,9 +38,7 @@ library(datasets)
 library(ggplot2)
 library(ngsReports)
 
-ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
-  geom_point() +
-  theme_classic()
+
 
 ```
 
@@ -43,10 +58,6 @@ print(caminho)
 ```
 
 ```{r}
-files_raw <- list.files(caminho,
-                        pattern = "fastqc.zip$", full.names = T)
 
-
-fdl_raw <- ngsReports::FastqcDataList(files_raw)
 
 ```

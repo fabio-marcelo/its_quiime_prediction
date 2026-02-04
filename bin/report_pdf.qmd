@@ -1,0 +1,573 @@
+---
+title: "Report"
+params:
+  fastqc_dir: ""
+  folder_full: ""
+  output: ""
+execute:
+  cache: true
+  freeze: auto
+author: ""
+date: "`r Sys.Date()`"
+format:
+  pdf:
+    documentclass: article
+    papersize: a4
+    fontsize: 10pt
+    number-sections: true
+    toc: true
+    geometry:
+      - left=1.5cm
+      - right=1.5cm
+      - top=1.5cm
+      - bottom=1.5cm
+    fig-align: center
+    fig-pos: "H"
+    keep-tex: false
+editor: visual
+---
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| code-fold: true
+
+# Remove all objects from R Environment
+#remove(list=ls())
+
+library(dplyr)
+library(ggplot2)
+library(ngsReports)
+library(qiime2R)
+#remotes::install_github('wilkelab/cowplot')
+library(cowplot)
+library(data.table)
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| code-fold: true
+
+path <- paste0(getwd(), "/", params$fastqc_dir)
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| code-fold: true
+
+files_raw <- list.files(path,
+                         pattern = "fastqc.zip$", full.names = T)
+
+
+fdl_raw <- ngsReports::FastqcDataList(files_raw)
+# writeHtmlReport(fileDir)
+summary_raw <- ngsReports::getModule(fdl_raw, "Summary")
+reads_raw <- ngsReports::readTotals(fdl_raw)
+```
+
+# Quality control
+
+## Summary
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| code-fold: true
+#| layout-ncol: 2
+#| out-width: 100%
+
+i <- 1
+step <- 9  # Set the step size as needed
+
+while (i <= length(fdl_raw)) {
+  j <- i + step
+  if (j > length(fdl_raw)) {
+    j <- length(fdl_raw)
+  }
+
+  print(ngsReports::plotSummary(fdl_raw[i:j]))
+
+  i <- i + 10
+}
+```
+
+## Total of reads
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| code-fold: true
+#| layout-ncol: 1
+#| out-width: 100%
+
+
+reads_raw %>%
+  arrange(Total_Sequences) %>%
+  # setnames("Total_Sequences", "Total_Sequences-raw_data") %>%
+  kableExtra::kbl() %>%
+  # Determina estilo e largura da tabela
+  kableExtra::kable_classic(full_width = T, html_font = "Cambria") %>%
+  kableExtra::kable_styling(full_width = T)
+
+
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| code-fold: true
+#| layout-ncol: 2
+#| out-width: 100%
+
+i <- 1
+step <- 9  # Set the step size as needed
+
+while (i <= length(fdl_raw)) {
+  j <- i + step
+  if (j > length(fdl_raw)) {
+    j <- length(fdl_raw)
+  }
+
+  print(ngsReports::plotReadTotals(fdl_raw[i:j])) +
+    theme(
+        legend.position = c(1, 1),
+        legend.justification = c(1, 1),
+        legend.background = element_rect(colour = "black"))
+
+  i <- i + (step + 1)
+}
+
+# folder_full <- paste0(getwd(), "/", params$folder_full)
+# save.image(file= paste0(folder_full, '/html_report_myEnvironment.RData'))
+
+```
+
+## Sequence length
+
+```{r plotlength}
+#| echo: false
+#| message: false
+#| warning: false
+#| code-fold: true
+#| layout-ncol: 1
+#| out-width: 100%
+
+# load(file=paste0(folder_full, 'html_report_myEnvironment.RData'))
+#files_raw <- list.files(path, pattern = "fastqc.zip$", full.names = T)
+
+#fdl_raw <- ngsReports::FastqcDataList(files_raw)
+
+plotlength <- ngsReports::plotSeqLengthDistn(fdl_raw,
+                                             usePlotly = F,
+                                             plotType = "line",
+                                             counts = T,
+                                             cluster = F,
+                                             expand.x = expansion(0, 0)) + 
+  guides(color = FALSE) + 
+  theme(axis.text.x = element_text(angle = 90, vjust = 1, hjust=1, size = 7)) + 
+  scale_x_discrete(guide = guide_axis(n.dodge = 2))
+
+print(plotlength)
+
+```
+
+## Per Base Sequence Qualities
+
+```{r BaseQuals}
+#| echo: false
+#| message: false
+#| warning: false
+#| code-fold: true
+#| layout-ncol: 2
+#| out-width: 100%
+
+
+for (i in seq(1, length(fdl_raw))) {
+  # print(i)
+  print(ngsReports::plotBaseQuals(fdl_raw[i],
+               plotType = "boxplot"))
+  # i = i + 1
+}
+
+```
+
+## Mean Sequence Quality Per Read
+
+```{r SeqQuals}
+#| echo: false
+#| message: false
+#| warning: false
+#| code-fold: true
+#| layout-ncol: 2
+#| out-width: 100%
+
+i <- 1
+step <- 9  # Set the step size as needed
+
+while (i <= length(fdl_raw)) {
+  j <- i + step
+  if (j > length(fdl_raw)) {
+    j <- length(fdl_raw)
+  }
+
+  print(ngsReports::plotSeqQuals(fdl_raw[i:j], plotType = "line")) +
+    theme(
+        legend.position = c(1, 1),
+        legend.justification = c(1, 1),
+        legend.background = element_rect(colour = "black"))
+
+  i <- i + (step + 1)
+}
+```
+
+## Per Base Sequence Content
+
+```{r SeqContent}
+#| echo: false
+#| message: false
+#| warning: false
+#| code-fold: true
+#| layout-ncol: 2
+#| out-width: 100%
+
+
+
+files_raw <- list.files(path, pattern = "fastqc.zip$", full.names = T)
+fdl_raw <- ngsReports::FastqcDataList(files_raw)
+
+for (i in seq(1, length(fdl_raw))) {
+  print(ngsReports::plotSeqContent(fdl_raw[i], plotType = "line"))
+}
+
+
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| code-fold: true
+#| layout-ncol: 1
+#| out-width: 100%
+#| output: false
+
+## Adapter Content
+
+# ngsReports::plotAdapterContent(fdl_raw,
+#                    plotType = "line",
+#                    adapterType = "Total") + theme(legend.position = "none")
+# 
+# for (i in seq(1, 84, 21)) {
+#   j = i + 20
+# 
+#   print(ngsReports::plotAdapterContent(fdl_raw[i:j],
+#              plotType = "line",
+#                    adapterType = "Total"))
+# }
+# ngsReports::plotAdapterContent(files_trimmo,
+#                    plotType = "line",
+#                    adapterType = "Total")
+# ngsReports::plotAdapterContent(files_SE,
+#                    plotType = "line",
+#                    adapterType = "Total")
+
+
+# i <- 1
+# step <- 9  # Set the step size as needed
+# 
+# while (i <= length(fdl_raw)) {
+#   j <- i + step
+#   if (j > length(fdl_raw)) {
+#     j <- length(fdl_raw)
+#   }
+#   #print(paste0(fdl_raw@))
+#   print(plotAdapterContent(fdl_raw[i:j]))
+# 
+#   i <- i + (step + 1)
+# }
+
+```
+
+## Sequence Duplication Levels
+
+```{r duplevels}
+#| echo: false
+#| message: false
+#| warning: false
+#| code-fold: true
+#| layout-ncol: 1
+#| out-width: 100%
+
+
+duplevels <- ngsReports::plotDupLevels(fdl_raw[1:nrow(as.data.frame(files_raw))],
+               plotType = "line",                         # replicate multiple individual plots
+               nc = 1) + theme(legend.position = "none")
+
+
+print(duplevels)
+
+```
+
+## GC content
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| code-fold: true
+#| layout-ncol: 1
+#| out-width: 100%
+
+gccontent <- ngsReports::plotGcContent(fdl_raw[1:nrow(as.data.frame(files_raw))],
+               plotType = "line",                               # replicate multiple individual plots
+               nc = 1) + theme(legend.position = "none")
+print(gccontent)
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| code-fold: true
+#| layout-ncol: 2
+#| out-width: 100%
+
+# Overrepresented Sequences
+# i <- 1
+# step <- 9  # Set the step size as needed
+# 
+# while (i <= length(fdl_raw)) {
+#   j <- i + step
+#   if (j > length(fdl_raw)) {
+#     j <- length(fdl_raw)
+#   }
+# 
+#   print(ngsReports::plotOverrep(fdl_raw[i:j], plotType = "line",
+#                                 nc = 1)) +
+#     theme(
+#         legend.position = c(1, 1),
+#         legend.justification = c(1, 1),
+#         legend.background = element_rect(colour = "black"))
+# 
+#   i <- i + 10
+# }
+```
+
+# ITS
+
+```{r its_folders}
+#| echo: false
+#| message: false
+#| warning: false
+#| code-fold: true
+#| out-width: 100%
+#############################################################
+###################UPLOAD QZA AS PHYLOSEQ####################
+#############################################################
+folder_full <- paste0(getwd(), "/", params$folder_full)
+#print(getwd())
+#print(folder_full)
+
+metadata <- read.csv2(paste0(folder_full, "metadata-file.txt"),
+                      sep = "\t")
+#
+## importar arquivos qza para phyloseq object
+sklearn_phylo_20 <- qiime2R::qza_to_phyloseq(features = paste0(folder_full, "20minLen_table-denoised.qza"), taxonomy = paste0(folder_full,"20minLen_sklearn-taxonomyITS.qza"))
+
+sklearn_phylo_80 <- qiime2R::qza_to_phyloseq(features = paste0(folder_full, "80minLen_table-denoised.qza"), taxonomy = paste0(folder_full,"80minLen_sklearn-taxonomyITS.qza"))
+
+```
+
+## Denoise stats
+
+```{r denoise}
+#| echo: false
+#| message: false
+#| warning: false
+#| code-fold: true
+#| layout-ncol: 1
+#| column: screen
+#| out-width: 100%
+
+
+# importar arquivo qza
+denoise_20 <- qiime2R::read_qza(paste0(folder_full, '20minLen_denoise-stats.qza'))
+denoise_80 <- qiime2R::read_qza(paste0(folder_full, '80minLen_denoise-stats.qza'))
+
+
+# tabela com métricas denoising
+denoise_20[["data"]] %>%
+  arrange(input) %>%
+  kableExtra::kbl(caption = "Denoising stats - 20minLen", align = "rccccc") %>%
+  # Determina estilo e largura da tabela
+  kableExtra::kable_classic(full_width = F,
+                html_font = "Cambria",
+                lightable_options = "basic")
+
+denoise_80[["data"]] %>%
+  arrange(input) %>%
+  kableExtra::kbl(caption = "Denoising stats - 80minLen", align = "rccccc") %>%
+  # Determina estilo e largura da tabela
+  kableExtra::kable_classic(full_width = F,
+                html_font = "Cambria",
+                lightable_options = "basic")
+
+```
+
+## Alpha-rarefaction
+### 20minLen
+```{r alphararefaction20}
+#| echo: false
+#| message: false
+#| warning: false
+#| code-fold: true
+#| layout-ncol: 1
+#| out-width: 100%
+############################################################
+################Alpha-rarefaction silva full################
+############################################################
+#expoort otu table
+rare_full_t <- phyloseq::otu_table(sklearn_phylo_20)
+#change class
+class(rare_full_t) <- "matrix"
+#transpose matrix
+rare_full_t <- t(rare_full_t)
+#rarefy species richness
+rare_full_t_out <- vegan::rarecurve(rare_full_t, step = 10000, tidy = T)
+
+
+# #plot
+plot <- ggplot(data=rare_full_t_out, aes(x=Sample, y=Species,group=Site)) +
+  geom_line(aes(color=Site)) +
+  geom_point() + guides(color = guide_legend(title = "Samples"))
+
+legend <- cowplot::get_legend(plot) 
+plot2 <- plot + theme(legend.position = "none")
+
+
+plot(plot2)
+plot(legend)
+```
+
+### 80minLen
+```{r alphararefaction80}
+#| echo: false
+#| message: false
+#| warning: false
+#| code-fold: true
+#| layout-ncol: 1
+#| out-width: 100%
+############################################################
+################Alpha-rarefaction silva full################
+############################################################
+#expoort otu table
+rare_full_t <- phyloseq::otu_table(sklearn_phylo_80)
+#change class
+class(rare_full_t) <- "matrix"
+#transpose matrix
+rare_full_t <- t(rare_full_t)
+#rarefy species richness
+rare_full_t_out <- vegan::rarecurve(rare_full_t, step = 10000, tidy = T)
+
+
+# #plot
+plot <- ggplot(data=rare_full_t_out, aes(x=Sample, y=Species,group=Site)) +
+  geom_line(aes(color=Site)) +
+  geom_point() + guides(color = guide_legend(title = "Samples"))
+
+legend <- cowplot::get_legend(plot) 
+plot2 <- plot + theme(legend.position = "none")
+
+
+plot(plot2)
+plot(legend)
+```
+
+## Taxonomy
+
+```{r taxonomy}
+#| echo: false
+#| message: false
+#| warning: false
+#| code-fold: true
+#| layout-ncol: 1
+#| column: screen
+
+its20 <- read.csv2(paste0(folder_full, "/final_report/20minLen_final_table.csv"),
+                 sep = "\t", check.names = F) %>%
+  data.table::setnames("Unnamed: 0", "Sample")
+  
+its20$Tool <- sub("vsearch", "vsearch_20", its20$Tool)
+its20$Tool <- sub("blast", "blast_20", its20$Tool)
+its20$Tool <- sub("sklearn", "sklearn_20", its20$Tool)
+  
+its80 <- read.csv2(paste0(folder_full, "/final_report/80minLen_final_table.csv"),
+                 sep = "\t", check.names = F) %>%
+  data.table::setnames("Unnamed: 0", "Sample")
+ 
+its80$Tool <- sub("vsearch", "vsearch_80", its80$Tool)
+its80$Tool <- sub("blast", "blast_80", its80$Tool)
+its80$Tool <- sub("sklearn", "sklearn_80", its80$Tool)
+
+its <- rbind(its20, its80)
+
+its2 <- its %>%
+  tidyr::pivot_wider(names_from = Tool,
+              values_from = Count,
+              values_fill = "0") %>%
+  arrange(Sample) %>%
+  group_by(Sample) %>%
+  select(Sample, taxonomy, vsearch_20, blast_20, sklearn_20, vsearch_80, blast_80, sklearn_80)
+
+readr::write_csv2(its2, file = paste0(folder_full, "/final_report/its_out.csv"))
+
+its2 %>%
+  kableExtra::kbl(caption = "Taxonomy", align = "ccc",booktabs = TRUE,
+    longtable = TRUE) %>%
+  # Determina estilo e largura da tabela
+  kableExtra::kable_classic(full_width = T,
+                html_font = "Cambria",
+                lightable_options = "basic") %>%
+  # Mescla c?lulas que s?o identicas na coluna 1
+  kableExtra::collapse_rows(columns = 1) %>%
+  # Insere tra?o horizontal entre as linhas enumeradas em c()
+  kableExtra::row_spec(row = c(1:nrow(its2)), extra_css = "border-bottom: 1px solid") %>%
+  kableExtra::add_header_above(c("","", "20minLen" = 3, "80minLen" = 3), bold = TRUE) %>%
+  kableExtra::kable_styling(full_width = F) %>%
+  kableExtra::kable_styling(
+    latex_options = c("repeat_header", "scale_down"),
+    font_size = 8
+  )
+```
+
+# Session Info
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| code-fold: true
+
+loaded_packs <- sessionInfo()
+sessionInfo()
+```
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| code-fold: true
+
+
+save.image(file= paste0(folder_full, '/html_report_myEnvironment.RData'))
+#load(file=paste0(folder_full, '/html_report_myEnvironment.RData'))
+```
+

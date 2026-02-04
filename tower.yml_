@@ -1,0 +1,7 @@
+reports:
+  "final_table.csv":
+    display: "Data sheet"
+
+reports:
+  "report_html.html":
+    display: "Report"

@@ -16,11 +16,12 @@ path = sys.argv[1]
 file_final = path.split('/')[-1]
 #final_table = 'final_table.csv'
 final_table = sys.argv[2]
+prefix = sys.argv[3]
 
 def planilha(x):
     
     #name = x
-    file = x+'_final_output.csv'
+    file = prefix + '_' + x + '_final_output.csv'
 
     
 
@@ -100,7 +101,7 @@ def planilha(x):
     df_final['Taxonomy'].replace('Nan', np.nan, inplace=True)
     df_final.dropna(subset=['Taxonomy'], inplace=True)
 
-    df_final.to_csv(f'{path}/planilha_{x}.csv',
+    df_final.to_csv(f'{path}/{prefix}_planilha_{x}.csv',
                                    index=True, sep= '\t')
 
 
@@ -111,15 +112,15 @@ metodos = ["blast", "vsearch", "sklearn"]
 for i in metodos:
     planilha(i)
 
-blast = pd.read_csv(f'{path}/planilha_blast.csv', sep = '\t', index_col = 'sample')
+blast = pd.read_csv(f'{path}/{prefix}_planilha_blast.csv', sep = '\t', index_col = 'sample')
 # blast.rename(columns = {'Taxonomy':'blast'}, inplace = True)
 blast['tool'] = 'blast'
 
-vsearch = pd.read_csv(f'{path}/planilha_vsearch.csv', sep = '\t', index_col = 'sample')
+vsearch = pd.read_csv(f'{path}/{prefix}_planilha_vsearch.csv', sep = '\t', index_col = 'sample')
 # blast.rename(columns = {'Taxonomy':'blast'}, inplace = True)
 vsearch['tool'] = 'vsearch'
 
-sklearn = pd.read_csv(f'{path}/planilha_sklearn.csv', sep = '\t', index_col = 'sample')
+sklearn = pd.read_csv(f'{path}/{prefix}_planilha_sklearn.csv', sep = '\t', index_col = 'sample')
 # blast.rename(columns = {'Taxonomy':'blast'}, inplace = True)
 sklearn['tool'] = 'sklearn'
 
@@ -135,7 +136,7 @@ result = pd.concat(frames)
 np.unique(result[['Taxonomy', 'tool']].values)
 result = result.sort_index()
 
-result.to_csv(f'{path}/final-{file_final}.csv',
+result.to_csv(f'{path}/{prefix}_final-{file_final}.csv',
                                    index=True, sep= '\t')
 
 files = glob.glob(f'{path}/count-taxons*')
@@ -145,5 +146,8 @@ total_counts = pd.concat(dfs,ignore_index=False)
 total_counts = total_counts.groupby(['Unnamed: 0', 'taxonomy', 'Tool']).sum('Count')
 
 # save as csv
+#total_counts.to_csv(f'{final_table}',
+ #                                  index=True, sep= '\t')
+                                   
 total_counts.to_csv(f'{final_table}',
                                    index=True, sep= '\t')
