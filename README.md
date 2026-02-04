@@ -29,7 +29,7 @@ The pipeline is executed through `quay.io/qiime2/core:2023.7` image and includes
 
 # Usage
 ## Minimum parameters
-You should provide `--fastq_folder`, `--ref_reads`, `--tax_file_, `--trainned_classifier` and `--outdir`.
+You should provide `--fastq_folder`, `--ref_reads`, `--tax_file`, `--trainned_classifier` and `--outdir`.
 ## Help message
 ```bash
 nextflow run github/its_pipeline/main.nf --help
